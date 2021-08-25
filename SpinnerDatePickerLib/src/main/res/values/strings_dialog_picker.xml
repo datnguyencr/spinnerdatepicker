@@ -1,0 +1,6 @@
+<resources>
+    <string name="number_day_formatter">%s日</string>
+    <string name="number_time_formatter">%s</string>
+    <string name="number_month_formatter">%02d 月</string>
+    <string name="number_year_formatter">%04d年</string>
+</resources>
