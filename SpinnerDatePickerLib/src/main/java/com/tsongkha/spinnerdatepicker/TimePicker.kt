@@ -101,12 +101,12 @@ class TimePicker(root: ViewGroup, mainColor: Int, blackColor: Int) : FrameLayout
         mMinuteSpinner.displayedValues = (minMinute..maxMinute).map { it.toString() }.toTypedArray()
         mMinuteSpinner.minValue = minMinute
         mMinuteSpinner.maxValue = maxMinute
-        mMinuteSpinner.wrapSelectorWheel = false
+        mMinuteSpinner.wrapSelectorWheel = true
 
         mHourSpinner.displayedValues = (minHour..maxHour).map { it.toString() }.toTypedArray()
         mHourSpinner.minValue = minHour
         mHourSpinner.maxValue = maxHour
-        mHourSpinner.wrapSelectorWheel = false
+        mHourSpinner.wrapSelectorWheel = true
 
         // set the spinner values
         mHourSpinner.value = mCurrentHour

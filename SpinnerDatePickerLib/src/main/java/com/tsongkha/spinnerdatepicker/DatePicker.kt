@@ -202,11 +202,8 @@ class DatePicker(root: ViewGroup, mainColor: Int, blackColor: Int) : FrameLayout
 
         // make sure the month names are a zero based array
         // with the months in the month spinner
-        val displayedValues = Arrays.copyOfRange(
-            mShortMonths,
-            mMonthSpinner.minValue,
-            mMonthSpinner.maxValue + 1
-        )
+        val displayedValues =
+            mShortMonths.copyOfRange(mMonthSpinner.minValue, mMonthSpinner.maxValue + 1)
         mMonthSpinner.displayedValues = displayedValues
 
         // year spinner range does not change based on the current date
@@ -230,7 +227,7 @@ class DatePicker(root: ViewGroup, mainColor: Int, blackColor: Int) : FrameLayout
         }
     }
 
-    override fun onSaveInstanceState(): Parcelable? {
+    override fun onSaveInstanceState(): Parcelable {
         val superState = super.onSaveInstanceState()
         return SavedState(superState, mCurrentDate, mMinDate, mMaxDate, mIsDayShown)
     }
